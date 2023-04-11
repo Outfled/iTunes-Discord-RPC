@@ -27,11 +27,12 @@ Discord only allows up to 300 assets (images) per application. So depending on t
 -Click the 'New Application' button in the top right
 
 -Set the name to 'iTunes' and press create (duplicate application names are allowed). This will be the RPC status display name.
+
 ![image](https://user-images.githubusercontent.com/55547083/231023853-b35955b0-ce14-4874-a281-2b0e083dc1cf.png)
 
 -In the general information tab, upload the application icon (img/iTunesLogo.jpeg). This image will be the default image used if the Discord client tries to display an asset image that does not exist.
 
-In the general information tab, scroll down & find the application ID. Press copy and save this for later.
+-In the general information tab, scroll down & find the application ID. Press copy and save this for later.
 
 
 ### Step 3: Upload the Album Images to the Discord Developer Application(s)
@@ -87,5 +88,21 @@ If you get a message saying the file image is too small:
 -Rename new_DiscordStatus.cpp to DiscordStatus.cpp
 
 ### Step 4: Build the Project
+-Open the solution (.sln) file in Visual Studio
 
+-Set the configuration to release x64
+
+-On the top of the window, press Build -> Build Solution
+
+-The exe file should be in the x64/ folder.
+
+## Help/Questions
+
+If you have any questions or need any help, you can add me on Discord:
+
+   Outfled#5243
+        
+If you cant find my account you can also add me through the link(s) below:
+
+http://discordapp.com/users/902777692477333504
 
