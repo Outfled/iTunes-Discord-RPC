@@ -1,10 +1,37 @@
 # iTunes-Discord-RPC
 
-Outfled Discord RPC Client for iTunes.
+Outfled Discord RPC Client for iTunes (Windows 10)
 
 When enabled, this program will connect to your iTunes process & display the current song you're listening to, alongside the artist and album name.
-By default, the album cover is not displayed in the RPC status. If you would like to display the album cover image, read below.
+By default, the album cover is not displayed in the RPC status. If you would like to display the album cover image, keep reading below.
 
+## Features
+
+    Minimizes to tray
+    Detects when iTunes and or Discord applications are not running to avoid crashing
+    Can be disabled without having to close the program
+    
+## Requirements
+
+Visual Studio:
+
+https://visualstudio.microsoft.com/vs/community/
+
+
+C++ MFC:
+
+Install from Visual Studio Installer -> Modify -> Individual Components -> C++ MFC for latest {version} build tools ({architect})
+
+
+iTunes (Obviously):
+
+https://support.apple.com/downloads/itunes
+
+
+Discord (Obviously):
+
+https://discord.com/download
+    
 ## Displaying Album Covers Alongside the RPC Status
 
 To do this, you will need to create a Discord Developer application.
