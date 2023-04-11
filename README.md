@@ -1,6 +1,7 @@
 # iTunes-Discord-RPC
 
-Discord RPC Client for iTunes.
+Outfled Discord RPC Client for iTunes.
+
 When enabled, this program will connect to your iTunes process & display the current song you're listening to, alongside the artist and album name.
 By default, the album cover is not displayed in the RPC status. If you would like to display the album cover image, read below.
 
