@@ -13,8 +13,12 @@ Discord only allows up to 300 assets (images) per application. So depending on t
 
 
 ### Step 1: Get Number of albums in iTunes Library & Export Each Album Image to a File
-1: Run libraryexport.exe (src/libraryexport)
-2: Since Discord Developer applications only allow 
+
+1: Open iTunes.exe
+
+2: Run libraryexport.exe (src/libraryexport)
+
+3: Once completed, libraryexport.exe will print the total number of albums found in your iTunes library. Keep note of this number and move to step 2.
 
 ### Step 1: Create a Discord Developer Application
 
