@@ -12,15 +12,15 @@ The Discord Developer application will hold all the album cover images for the R
 Discord only allows up to 300 assets (images) per application. So depending on the amount of albums in your iTunes library, you may need to make multiple Discord Developer Applications.
 
 
-### Step 1: Get Number of albums in iTunes Library & Export Each Album Image to a File
+### Step 1: Export Each Album Image to a File
 
 1: Open iTunes.exe
 
-2: Run libraryexport.exe (src/libraryexport)
+2: Run albumexport.exe (src/albumexport.exe)
 
-3: Once completed, libraryexport.exe will print the total number of albums found in your iTunes library. Keep note of this number and move to step 2.
+3: Once completed, albumexport.exe will print the total number of discord applications you will need to create. Complete & repeat the next steps however many times albumexport.exe printed.
 
-### Step 1: Create a Discord Developer Application
+### Step 2: Create Discord Developer Application(s)
 
 1: Login to the Discord Developer Portal (https://discord.com/developers/applications)
 2: Click the 'New Application' button in the top right
