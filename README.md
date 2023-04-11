@@ -20,13 +20,23 @@ Run albumexport.exe (src/albumexport.exe)
 
 Once completed, albumexport.exe will print the total number of discord applications you will need to create. Complete & repeat step 2 however many times albumexport.exe printed.
 
+
 ### Step 2: Create Discord Developer Application(s)
 
-1: Login to the Discord Developer Portal (https://discord.com/developers/applications)
-2: Click the 'New Application' button in the top right
-3: Set the name to 'iTunes' and press create
-4: In the general information tab, upload the application icon (img/iTunesLogo.jpeg)
-5: In the general information tab, scroll down & find the application ID. Click copy and save this for later.
+Login to the Discord Developer Portal (https://discord.com/developers/applications)
+
+Click the 'New Application' button in the top right
+
+Set the name to 'iTunes' and press create (duplicate application names are allowed)
+
+In the general information tab, upload the application icon (img/iTunesLogo.jpeg). This image will be the default image used if the Discord client tries to display an asset image that does not exist.
+
+In the general information tab, scroll down & find the application ID. Press copy and save this for later.
+
+
+### Step 3: Upload the Album Images to the Discord Developer Application(s)
+
+
 
 
 
