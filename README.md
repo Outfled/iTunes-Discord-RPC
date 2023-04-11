@@ -14,11 +14,11 @@ Discord only allows up to 300 assets (images) per application. So depending on t
 
 ### Step 1: Export Each Album Image to a File
 
-1: Open iTunes.exe
+Open iTunes.exe
 
-2: Run albumexport.exe (src/albumexport.exe)
+Run albumexport.exe (src/albumexport.exe)
 
-3: Once completed, albumexport.exe will print the total number of discord applications you will need to create. Complete & repeat the next steps however many times albumexport.exe printed.
+Once completed, albumexport.exe will print the total number of discord applications you will need to create. Complete & repeat step 2 however many times albumexport.exe printed.
 
 ### Step 2: Create Discord Developer Application(s)
 
