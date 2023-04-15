@@ -46,7 +46,7 @@ https://discord.com/download
 	
 ## Displaying Album Covers Alongside the RPC Status
 
-To do this, you will need to create a Discord Developer application.
+To do this, you will need to create a Discord Developer application, or multiple, depending on the amount of albums in your iTunes library.
 
 The Discord Developer application will hold all the album cover images for the RPC.
 
