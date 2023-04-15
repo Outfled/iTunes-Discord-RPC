@@ -70,7 +70,7 @@ So depending on the amount of albums in your iTunes library, you may need to mak
 
 -Set the name to 'Apple Music' and press create (duplicate application names are allowed). This will be the RPC status display name.
 
-![image](https://user-images.githubusercontent.com/55547083/231023853-b35955b0-ce14-4874-a281-2b0e083dc1cf.png)
+![Capture](https://user-images.githubusercontent.com/55547083/232207910-e640079b-b4b8-49af-94d9-005fbb538f92.PNG)
 
 -Scroll down & find the application ID. Press copy and save this for later.
 
