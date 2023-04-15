@@ -32,11 +32,26 @@ Discord (Obviously):
 
 https://discord.com/download
     
+## Errors
+
+### 2147746132
+	The most common cause is that iTunes.exe is running as admin and iTunesDiscordRPC.exe is not running as administrator.
+	Or vice versa, iTunesDiscordRPC.exe is running as administrator while iTunes.exe is not
+
+### Discord not displaying status while music is playing on iTunes
+
+	Open discord, on the bottom left, click User Settings then select Activity Privacy on the bottom left.
+	Make sure 'Display current activity as a status message.' is checked.
+	Additionally, make sure Discord is not running as administrator. Unless iTunes.exe AND iTunesDiscordRPC.exe are running as administrator
+	
 ## Displaying Album Covers Alongside the RPC Status
 
 To do this, you will need to create a Discord Developer application.
+
 The Discord Developer application will hold all the album cover images for the RPC.
-Discord only allows up to 300 assets (images) per application. So depending on the amount of albums in your iTunes library, you may need to make multiple Discord Developer Applications.
+
+Discord only allows up to 300 assets (images) per application.
+So depending on the amount of albums in your iTunes library, you may need to make multiple Discord Developer Applications.
 
 
 ### Step 1: Export Each Album Image to a File
@@ -57,9 +72,7 @@ Discord only allows up to 300 assets (images) per application. So depending on t
 
 ![image](https://user-images.githubusercontent.com/55547083/231023853-b35955b0-ce14-4874-a281-2b0e083dc1cf.png)
 
--In the general information tab, upload the application icon (img/iTunesLogo.jpeg). This image will be the default image used if the Discord client tries to display an asset image that does not exist.
-
--In the general information tab, scroll down & find the application ID. Press copy and save this for later.
+-Scroll down & find the application ID. Press copy and save this for later.
 
 
 ### Step 3: Upload the Album Images to the Discord Developer Application(s)
@@ -98,6 +111,11 @@ If you get a message saying the file image is too small:
     You can choose to upload a bigger image for the file if you want.
     Make sure if you do upload a different image, the asset name is the exact same as the original one
     
+-Additionally, you can upload a cover image, which will be used in the event that the iTunes album is not found in the application assets.
+
+	If you choose to upload an image, you can use the iTunes logo image located in img/iTunes-Logo.png 
+	You only need to select the cover image for the first Discord Application.
+	
 -Repeat step 3 for each application created. Move to step 4 when finished.
 
 ### Step 4: Replace the Header & Source Files
