@@ -68,15 +68,25 @@ So depending on the amount of albums in your iTunes library, you may need to mak
 
 -Click the 'New Application' button in the top right
 
--Set the name to 'Apple Music' and press create (duplicate application names are allowed). This will be the RPC status display name.
+-Set the name to 'Apple Music 1'
+	Note: if this not the first application you're creating (for this), then change the 1 to the next incremental value.
+	Example: if this is the second application, the name should be 'Apple Music 2'. Then the next 'Apple Music 3', and so on and so forth
+	
+This will be the RPC status display name.
 
 ![Capture](https://user-images.githubusercontent.com/55547083/232207910-e640079b-b4b8-49af-94d9-005fbb538f92.PNG)
+
+You will change the name later. For now, keep it as instructed.
 
 -Scroll down & find the application ID. Press copy and save this for later.
 
 
 ### Step 3: Upload the Album Images to the Discord Developer Application(s)
 
+-Select the first Discord Application from the 'My Applications' section
+
+	If you created multiple applications. Select the next application.
+	You should be going 
 -On the left, navigate to Rich Presence -> Art Assets
 
 -Press Add Image(s)
