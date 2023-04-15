@@ -45,7 +45,7 @@ Discord only allows up to 300 assets (images) per application. So depending on t
 
 -Run albumexport.exe (src/albumexport.exe)
 
--Once completed, albumexport.exe will print the total number of discord applications you will need to create. Complete & repeat step 2 however many times albumexport.exe printed.
+-Once completed, which can take a bit of time depending on how big your library is, albumexport.exe will print the total number of discord applications you will need to create. Complete & repeat step 2 however many times albumexport.exe printed.
 
 ### Step 2: Create Discord Developer Application(s)
 
@@ -112,24 +112,78 @@ If you get a message saying the file image is too small:
 -Copy new_DiscordStatus.cpp into src/
 -Delete the file src/AlbumAssets.h
 -Rename new_AlbumAssets.h to AlbumAssets.h
+-Delete the file src/DiscordStatus.cpp
 -Rename new_DiscordStatus.cpp to DiscordStatus.cpp
 
-### Step 4: Build the Project
--Open the solution (.sln) file in Visual Studio
+### Step 5: Define the Discord Developer Application ID(s)
 
--Set the configuration to release x64
+-Open the new AlbumAssets.h file (don't open w/Visual Studio; use a text editor. VS wont initially be able to read AlbumAssets.h for some reason)
+-Delete the following line:
 
--On the top of the window, press Build -> Build Solution
+    /* TODO : DEFINE RPC_ASSET{index}_APPLICATION_ID FOR EACH DISCORD APPLICATION CREATED */
+       
+-Repeat the upcoming steps for *each* discord application you created:
 
--The exe file should be in the x64/ folder.
-
-## Help/Questions
-
-If you have any questions or need any help, you can add me on Discord:
-
-   Outfled#5243
+    Type the following into the current line:
+    #define RPC_ASSET{index}_APPLICATION_ID "{APPLICATION_ID}"
         
-If you cant find my account you can also add me through the link(s) below:
+    If this is the first definition, replace {index} with 1, like so: RPC_ASSEST1_APPLICATION_ID
+    If this is NOT the first definition, replace {index} with the previous line {index} + 1.
+    For example, if i have 2 applications, the lines would look like so:
+        #define RPC_ASSET1_APPLICATIONID "{APPLICATION_ID}"
+        #define RPC_ASSET2_APPLICATIONID "{APPLICATION_ID}"
+            
+    Next, replace {APPLICATION_ID} with the corresponding Discord application id.
+    If you had multiple application, the {APPLICATION_ID} for each definition line should always be different.
+    Full examples:
+        Lets say my application id is 185392184 and this is my first #define line. My line would look like this:
+            #define RPC_ASSET1_APPLICATION_ID "185392184"
+        Lets say my next application id is 91823652 and this is my second #define line:
+            #define RPC_ASSET2_APPLICATION_ID "91823652"
+        So on and so forth.
+            
+        Make sure the application id is wrapped in quotes like the example above.
+        
+### Step 5: Paste the application id(s) into DiscordStatus.cpp
 
-http://discordapp.com/users/902777692477333504
+-Open the new DiscordStatus.cpp
+-Go to line 68, you should see the following line:
 
+    for ( int i = 0; i < ARRAYSIZE( rgszAlbumNames_1 ) && lpszApplicationID == NULL; ++i )
+	{
+		if (0 == strcmp( rgszAlbumNames_1[i], Album ) ) {
+		    /* TODO : REPLACE COMMENT WITH CORRESPONDING APPLICATION ID */
+		}
+	}
+
+-Depending on how many discord applications you had to create, there may be more similar lines right underneath the lines above.
+-Back in step 4, you had to create definitions (#define) in AlbumAssets.h for each discord application.
+-Starting from the first application ID, replace
+
+    // TODO : DEFINE RPC_ASSET{index}_APPLICATION_ID FOR EACH DISCORD APPLICATION CREATED
+        
+With:
+	lpszApplicationID = {APPLICATION_ID_DEFINITION_NAME};
+Replace {APPLICATION_ID_DEFINITION_NAME} with the name of the definition for the corresponding application ID
+-For example, if this was the first for-loop, the line would look like this:
+	lpszApplicationID = RPC_ASSET1_APPLICATION_ID;
+-If it was the second for-loop, the line would look like this:
+	lpszApplicationID = RPC_ASSET2_APPLICATION_ID;
+-So on and so forth
+-Again, to clarify, if you created multiple definitions/discord-applications, there will be multiple lines you have to edit.
+-Just look for "// TODO : DEFINE RPC_ASSET{index}_APPLICATION_ID FOR EACH DISCORD APPLICATION CREATED" and make sure you edit each one.
+Going in order of the corresponding application id definition from AlbumAssets.h
+
+### Step 6: Rebuild the project
+-On the top of visual studio, set the configuration options to Release.
+-On the top of Visual Studio, click Build -> Build Solution
+-If successful, the exe will be in ..\x64\Release\iTunes Discord RPC.exe
+
+## Questions/Concerns/Help
+If you have any questions or concerns or need help, you can add my discord:
+
+    Outfled#5243
+or
+
+    https://discord.com/users/902777692477333504
+    
