@@ -133,7 +133,7 @@ static HANDLE g_hITunesThread;
 CiTunesDiscordRPCDlg::CiTunesDiscordRPCDlg(CWnd* pParent /*=nullptr*/)
 	: CDialogEx(IDD_ITUNES_DISCORD_RPC_DIALOG, pParent)
 {
-	m_hIcon = AfxGetApp()->LoadIcon(IDR_MAINFRAME);
+	m_hIcon				= AfxGetApp()->LoadIcon(IDR_MAINFRAME);
 }
 
 void CiTunesDiscordRPCDlg::DoDataExchange(CDataExchange* pDX)
@@ -232,6 +232,12 @@ void CiTunesDiscordRPCDlg::OnSysCommand(UINT nID, LPARAM lParam)
 	{
 		CAboutDlg dlgAbout;
 		dlgAbout.DoModal();
+	}
+	// Window is closing
+	else if ( nID == SC_CLOSE )
+	{
+		this->OnBnClickedButtonClose();
+		return;
 	}
 	else
 	{
