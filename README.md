@@ -68,7 +68,7 @@ So depending on the amount of albums in your iTunes library, you may need to mak
 
 -Click the 'New Application' button in the top right
 
--Set the name to 'iTunes' and press create (duplicate application names are allowed). This will be the RPC status display name.
+-Set the name to 'Apple Music' and press create (duplicate application names are allowed). This will be the RPC status display name.
 
 ![image](https://user-images.githubusercontent.com/55547083/231023853-b35955b0-ce14-4874-a281-2b0e083dc1cf.png)
 
