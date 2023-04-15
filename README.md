@@ -58,6 +58,8 @@ So depending on the amount of albums in your iTunes library, you may need to mak
 
 -Make sure you have iTunes running
 
+-Start playing _any_ song that you have downloaded
+
 -Run albumexport.exe (src/albumexport.exe)
 
 -Once completed, which can take a bit of time depending on how big your library is, albumexport.exe will print the total number of discord applications you will need to create. Complete & repeat step 2 however many times albumexport.exe printed.
